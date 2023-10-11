@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import authService from './appwrite/auth';
-import login from './appwrite/auth';
-import logout from './appwrite/auth';
 import { Footer, Header } from './components';
 import { Outlet } from 'react-router-dom';
+import {login, logout} from './store/authSlice'
 
 function App() {
 
@@ -27,11 +26,11 @@ function App() {
   
 
   return !loading ? (
-    <div className='min-h-screen flex flex-wrap content-between bg-green-400'>
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
       <div className='w-full block'>
         <Header />
         <main>
-          {/* <Outlet /> */}
+          {/* <Outlet /> */} todo
         </main>
         <Footer />
       </div>
